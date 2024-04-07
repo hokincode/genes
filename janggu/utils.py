@@ -104,9 +104,10 @@ def _check_valid_files(list_of_files):
 
 NOLETTER = -100000000
 sorted_DNA = ['A', 'C', 'G', 'T']
-LETTERMAP = {k: i for i, k in enumerate(sorted(IUPAC.unambiguous_dna.letters))}
+LETTERMAP = {k: i for i, k in enumerate(sorted_DNA)}
 # LETTERMAP = {k: i for i, k in enumerate(sorted(IUPAC.unambiguous_dna.letters))}
-NNUC = len(IUPAC.unambiguous_dna.letters)
+NNUC = 4
+# NNUC = len(IUPAC.unambiguous_dna.letters)
 
 # mapping of nucleotides to integers
 NMAP = defaultdict(lambda: NOLETTER)
