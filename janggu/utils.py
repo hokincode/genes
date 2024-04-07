@@ -80,7 +80,7 @@ def sequences_from_fasta(fasta, string='dna'):
     # else:
     #    alpha = IUPAC.protein
     alpha = 'GATC'
-    gen = SeqIO.parse(file_, "fasta", alpha)
+    gen = SeqIO.parse(file_, "fasta")
     seqs = [item for item in gen]
 
     return seqs
