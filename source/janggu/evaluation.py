@@ -17,7 +17,7 @@ from sklearn.metrics import precision_recall_curve
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import roc_curve
 
-from janggu.utils import ExportJson
+# from janggu.utils import ExportJson
 from janggu.utils import ExportScorePlot
 from janggu.utils import ExportTsv
 from janggu.utils import _to_list
