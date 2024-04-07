@@ -114,7 +114,12 @@ NMAP = defaultdict(lambda: NOLETTER)
 NMAP.update(LETTERMAP)
 
 # mapping of amino acids to integers
-LETTERMAP = {k: i for i, k in enumerate(sorted(IUPAC.protein.letters))}
+# The standard amino acid codes.
+amino_acids = "ARNDCEQGHILKMFPSTWYV"
+
+# Sorting these codes alphabetically.
+sorted_amino_acids = sorted(amino_acids)
+LETTERMAP = {k: i for i, k in enumerate(sorted_amino_acids)}
 PMAP = defaultdict(lambda: NOLETTER)
 PMAP.update(LETTERMAP)
 
