@@ -9,7 +9,7 @@ from copy import deepcopy
 import numpy as np
 import pandas as pd
 from Bio import SeqIO
-from Bio.Alphabet import IUPAC
+# from Bio.Alphabet import IUPAC
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 from pybedtools import BedTool
@@ -75,10 +75,10 @@ def sequences_from_fasta(fasta, string='dna'):
     """
 
     file_ = open(fasta)
-    if string == 'dna':
-        alpha = IUPAC.unambiguous_dna
-    else:
-        alpha = IUPAC.protein
+    # if string == 'dna':
+    #    alpha = IUPAC.unambiguous_dna
+    # else:
+    #    alpha = IUPAC.protein
     gen = SeqIO.parse(file_, "fasta", alpha)
     seqs = [item for item in gen]
 
