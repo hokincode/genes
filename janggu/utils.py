@@ -79,6 +79,7 @@ def sequences_from_fasta(fasta, string='dna'):
     #    alpha = IUPAC.unambiguous_dna
     # else:
     #    alpha = IUPAC.protein
+    alpha = 'GATC'
     gen = SeqIO.parse(file_, "fasta", alpha)
     seqs = [item for item in gen]
 
