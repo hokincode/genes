@@ -148,10 +148,7 @@ def seq2ind(seq):
     if isinstance(seq, SeqRecord):
         seq = seq.seq
     if isinstance(seq, (str, Seq)):
-        if type(seq.alphabet) is type(IUPAC.unambiguous_dna):
-            return [NMAP[x.upper()] for x in seq]
-        # else proteins should be used
-        return [PMAP[x.upper()] for x in seq]
+        return [NMAP[x.upper()] for x in seq]
     raise TypeError('seq2ind: Format is not supported')
 
 
